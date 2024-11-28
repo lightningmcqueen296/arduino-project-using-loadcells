@@ -83,7 +83,9 @@ void WeightEvents::toggleStatus() {
 
 
 }
-
+float WeightEvents::getCurrentWeight(){
+  return currentWeight;
+}
 float WeightEvents::settle_changed_value(float past_value, float i) {
   float diff = abs(past_value/i-1);
   const int serialPrintInterval = 0;
@@ -158,3 +160,4 @@ float WeightEvents::getWeight() {
   float wtVal = loadCell.getData();
   return wtVal;
 }
+
