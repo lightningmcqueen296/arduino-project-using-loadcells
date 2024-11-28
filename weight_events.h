@@ -31,6 +31,7 @@ class WeightEvents {
     float getWeight();
     void setPillLimit(int value);
     void setNumberPills(int value);
+    float getCurrentWeight();
 };
 
 
