@@ -323,7 +323,8 @@ void initialize_state1A() {
 void state1A () {
   
   if (currentStateVal.isEmpty()) initialize_state1A();
-  currentStateVal.line1.set("Placed Wt: "+ String(wt.getWeight(),4));
+  float weight = wt.getCurrentWeight();
+  currentStateVal.line1.set("Placed Wt: "+ String(weight,4));
   currentStateVal.line2.set("Press to save, click to cancel..");
 
   currentStateVal.printText(lcd);
@@ -594,7 +595,7 @@ String transition(String currentState, String event) {
   if (currentState == "3") {
     if (event == "btnClicked") {currentStateVal.empty();return "3A"; }
     else if (event == "wtChange") {currentStateVal.empty();return "0"; }
-    else if (event == "wtChangeLimit") {currentStateVal.empty();return "0A"}
+    else if (event == "wtChangeLimit") {currentStateVal.empty();return "0A";}
 
 
   }
