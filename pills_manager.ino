@@ -82,12 +82,12 @@ class LineText {
   }
 
   void empty() {
-    Serial.println("line empty start");
+    
     str = "";
     lastScrollTime = -1;
     isScrollText = false;
     counter = 0;
-    Serial.println("line empty end");
+  
   }
 
   void initiateScroll(bool hasScrollStatus) {
@@ -211,18 +211,18 @@ public:
   }
 
   void empty() {
-    Serial.println("about to empty");
+    
     line1.empty();
     line2.empty();
-    Serial.println("Both lines done");
+    
     value = 0;
     counter = 0;
     floatValue = 0.0;
-    Serial.println("settung scroll status");
+    
     //set default scroll status to false
     lastScrollTime = -1;
     isScrollText = false;
-    Serial.println("emptied bowels");
+    
   }
 
   LineText* getLine(int lineNo) {
