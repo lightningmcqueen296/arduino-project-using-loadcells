@@ -12,6 +12,15 @@ float CAL_FACTOR_FIX = 975.4500;
 #define LCD_WIDTH 16
 //helpers
 
+//Liquid Crystal constructor:
+LiquidCrystal lcd(12,11,5,4,3,2);
+  
+ButtonEvents bt(7);
+WeightEvents wt(9,8);
+TimeEvents tm;
+AlarmNoise sound(10);
+
+StateValue currentStateVal;
 
 
 class AlarmNoise {
@@ -263,15 +272,7 @@ public:
   
 };
 
-//Liquid Crystal constructor:
-LiquidCrystal lcd(12,11,5,4,3,2);
-  
-ButtonEvents bt(7);
-WeightEvents wt(9,8);
-TimeEvents tm;
-AlarmNoise sound(10);
 
-StateValue currentStateVal;
 
 
 void initialize_state0 () {
