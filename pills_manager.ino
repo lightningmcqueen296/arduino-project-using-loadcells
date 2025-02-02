@@ -702,29 +702,4 @@ void loop() {
 }
 
 
-// HX711_ADC loadCell0(9,8);
-// void setup() {
-//   Serial.begin(9600); delay(100);
-//   loadCell0.begin();
-//   loadCell0.start(5000,true);
-//   loadCell0.tareNoDelay();
-//   while (!loadCell0.getTareStatus()) { loadCell0.update(); Serial.println("here");};
 
-//   float calFactor = 27870.0 * 7.0 / 200.0;
-//   // Serial.println("calFactor = " + String(calFactor,4));
-//   delay(3000);
-//   loadCell0.setCalFactor(calFactor);
-//   // loadCell0.setCalFactor(1083.8);
-// }
-
-// void loop() {
-//   if (loadCell0.update()) {
-//     float data = loadCell0.getData();
-//     float exist_calFactor = loadCell0.getCalFactor();
-//     Serial.println("Dout Pin read = " + String(data) + " cal factor = " + String(exist_calFactor,4));
-//     // delay(1000);
-//   }
-  
-//   checkSerialInput();
-
-// }
